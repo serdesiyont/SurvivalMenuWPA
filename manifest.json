@@ -1,5 +1,5 @@
 {
-    "name": "osm",
+    "name": "OfflineSurvivalMenuPWA",
     "short_name": "osm",
     "start_url": ".",
     "display": "standalone",
