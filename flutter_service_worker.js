@@ -1,3 +1,29 @@
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/6.0.2/workbox-sw.js');
+
+workbox.precaching.precacheAndRoute([
+  '/index.html',
+  '/guide/',
+  '/assets/',
+  '/canvaskit/',
+  '/main.dart.js',
+  '/icons',
+  '/public/index.html',
+  '/flutter.js'
+]);
+
+workbox.routing.registerRoute(
+  ({request}) => request.mode === 'navigate',
+  new workbox.strategies.CacheFirst({
+    cacheName: 'pages',
+    plugins: [
+      new workbox.expiration.ExpirationPlugin({
+        maxEntries: 50,
+        purgeOnQuotaError: true, // Automatically cleanup if quota is exceeded.
+      }),
+    ],
+  })
+);
+
 'use strict';
 const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
