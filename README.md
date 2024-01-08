@@ -1,6 +1,6 @@
 # SurvivalMenuWPA
 # You can find the original Project:
-  https://github.com/dagmawibabOfflineSurvivalManual
+  https://github.com/dagmawibabi/OfflineSurvivalManual
 #URL: 
  https://survivalguidepwa.web.app/
 
